@@ -32,7 +32,7 @@ class BoundingBox:
         Returns:
             tuple[int, int]: the center (x, y).
         """
-        return ((self.xmax + self.xmin) // 2, (self.ymax + self.ymin) // 2)
+        return (self.xmin + self.width // 2, self.ymin + self.height // 2)
 
     @property
     def width(self) -> int:
@@ -41,7 +41,7 @@ class BoundingBox:
         Returns:
             int: the width.
         """
-        return self.xmax - self.xmin
+        return self.xmax - self.xmin + 1
 
     @property
     def height(self) -> int:
@@ -50,7 +50,7 @@ class BoundingBox:
         Returns:
             int: the height.
         """
-        return self.ymax - self.ymin
+        return self.ymax - self.ymin + 1
 
     def as_tuple(self) -> tuple[int, int, int, int]:
         """Gets the bounding box as a tuple.
@@ -322,6 +322,6 @@ class ImageEmbedder(EmbeddingFunction):
         xmax = xmin + embedded_width - 1
         ymax = ymin + embedded_height - 1
 
-        result[ymin:ymax, xmin:xmax, :] = embedded_image
+        result[ymin : ymax + 1, xmin : xmax + 1, :] = embedded_image
 
         return result, BoundingBox(xmin=xmin, ymin=ymin, xmax=xmax, ymax=ymax)
