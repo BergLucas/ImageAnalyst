@@ -1,7 +1,7 @@
 from __future__ import annotations
 from image_analyst.exceptions import DownloadFailedException
 from image_analyst.models import BoundingBox, Detection
-from typing import Optional, Protocol
+from typing import Optional, Protocol, Union
 from numbers import Real
 import urllib.request
 import urllib.error
@@ -13,11 +13,11 @@ import os
 logger = logging.getLogger(__name__)
 
 
-def sigmoid(x: Real | np.ndarray) -> np.ndarray:
+def sigmoid(x: Union[Real, np.ndarray]) -> np.ndarray:
     """Computes the sigmoid of x.
 
     Args:
-        x (Real | np.ndarray): the value x.
+        x (Union[Real, np.ndarray]): the value x.
 
     Returns:
         np.ndarray: the sigmoid of x.
