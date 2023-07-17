@@ -629,39 +629,37 @@ files = [
 
 [[package]]
 name = "image-analyst-cv2"
-version = "0.1.0"
+version = "0.1.1"
 description = "ImageAnalyst CV2 is an extension to the ImageAnalyst library, providing additional models and functions using cv2."
 optional = true
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "image_analyst_cv2-0.1.0-py3-none-any.whl", hash = "sha256:46a05332fa40cb8ee49c6baa9f80c670cd1efe6beabc146156be9dab7d8706d7"},
-    {file = "image_analyst_cv2-0.1.0.tar.gz", hash = "sha256:6f2cc5cf3c3e01e4d77c7a7c3d7d110219465605fe087347f555a77b26b564ec"},
+    {file = "image_analyst_cv2-0.1.1-py3-none-any.whl", hash = "sha256:904b49b94b181ebcfb601858a63ef94a8e1e9f9ed5ef3e6bb9948d4f1c5d3461"},
+    {file = "image_analyst_cv2-0.1.1.tar.gz", hash = "sha256:b6fb201f10df6aeeb8f8b6077e0097deb5a04a706946ec37a75810a351451255"},
 ]
 
 [package.dependencies]
-image-analyst = ">=0.1.0,<0.2.0"
+image-analyst = ">=0.1.2,<0.2.0"
 numpy = ">=1.24.3,<2.0.0"
-opencv-python = {version = ">=4.8.0.74,<5.0.0.0", optional = true, markers = "extra == \"cv2\""}
+opencv-contrib-python = {version = ">=4.8.0.74,<5.0.0.0", optional = true, markers = "extra == \"cv2\""}
 
 [package.extras]
-cv2 = ["opencv-python (>=4.8.0.74,<5.0.0.0)"]
-cv2-contrib = ["opencv-contrib-python (>=4.8.0.74,<5.0.0.0)"]
-cv2-contrib-headless = ["opencv-contrib-python-headless (>=4.8.0.74,<5.0.0.0)"]
-cv2-headless = ["opencv-python-headless (>=4.8.0.74,<5.0.0.0)"]
+cv2 = ["opencv-contrib-python (>=4.8.0.74,<5.0.0.0)"]
+cv2-headless = ["opencv-contrib-python-headless (>=4.8.0.74,<5.0.0.0)"]
 
 [[package]]
 name = "image-analyst-hf"
-version = "0.1.0"
+version = "0.1.1"
 description = "ImageAnalyst HF is an extension to the ImageAnalyst library, providing additional models and functions using huggingface."
 optional = true
 python-versions = ">=3.9,<3.12"
 files = [
-    {file = "image_analyst_hf-0.1.0-py3-none-any.whl", hash = "sha256:24c8071e970636848d6f5f12896fb6765daa7e53f79e82a0ad7aa303d845451c"},
-    {file = "image_analyst_hf-0.1.0.tar.gz", hash = "sha256:e9a2dfeedf4871e4118bd29c66acbd8a45402dfee85436e7b3ff83e239677ea1"},
+    {file = "image_analyst_hf-0.1.1-py3-none-any.whl", hash = "sha256:f1b8d23a07fff0055902ed91255fa53c54067be10247690359d32f88317d3e49"},
+    {file = "image_analyst_hf-0.1.1.tar.gz", hash = "sha256:96d8c90a3f312e376a4fdf3d2549bd214327e5c394c7d5109fa0e5b4349c18c5"},
 ]
 
 [package.dependencies]
-image-analyst = ">=0.1.1,<0.2.0"
+image-analyst = ">=0.1.2,<0.2.0"
 numpy = ">=1.24.3,<2.0.0"
 pillow = ">=10.0.0,<11.0.0"
 tensorflow = ">=2.10.0,<3.0.0"
@@ -672,33 +670,33 @@ transformers = {version = ">=4.30.2,<5.0.0", extras = ["onnxruntime", "tf", "tf-
 
 [[package]]
 name = "image-analyst-onnx"
-version = "0.1.0"
+version = "0.1.1"
 description = "ImageAnalyst ONNX is an extension to the ImageAnalyst library, providing additional models and functions using onnx."
 optional = true
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "image_analyst_onnx-0.1.0-py3-none-any.whl", hash = "sha256:444e4da00d025bff54d8e4495ff4709de66ee16a466b3925e9e0c13227ff16cf"},
-    {file = "image_analyst_onnx-0.1.0.tar.gz", hash = "sha256:efec77644ce69f73317e4a9e1380434cdaafad1674c27c29a3413d0ed48a6313"},
+    {file = "image_analyst_onnx-0.1.1-py3-none-any.whl", hash = "sha256:cd4a4b14158aed7186d678e05357249ce706f3448d9f51589b66f5f00be82e52"},
+    {file = "image_analyst_onnx-0.1.1.tar.gz", hash = "sha256:25030cf65a5b738dadd7659dd1b7b62e8c45add598244583303bbb2cf48a988d"},
 ]
 
 [package.dependencies]
-image-analyst = ">=0.1.0,<0.2.0"
+image-analyst = ">=0.1.2,<0.2.0"
 numpy = ">=1.24.3,<2.0.0"
 onnxruntime = ">=1.15.1,<2.0.0"
 
 [[package]]
 name = "image-analyst-tf"
-version = "0.1.1"
+version = "0.1.2"
 description = "ImageAnalyst TF is an extension to the ImageAnalyst library, providing additional models and functions using tensorflow."
 optional = true
 python-versions = ">=3.9,<3.12"
 files = [
-    {file = "image_analyst_tf-0.1.1-py3-none-any.whl", hash = "sha256:f49dedf1cd9611e0b5398a02b24c6589ec8b57ae6a08944073b521c93f5f367a"},
-    {file = "image_analyst_tf-0.1.1.tar.gz", hash = "sha256:3774da56d22eefacdc610a736a2f14fd8d8d49bc4512fda4e449911c68e4384d"},
+    {file = "image_analyst_tf-0.1.2-py3-none-any.whl", hash = "sha256:76779578da3ea297da797b838a89ec6fc10aa643fb8dcbc156b5b3d10ed2f66c"},
+    {file = "image_analyst_tf-0.1.2.tar.gz", hash = "sha256:8e37bcfaf05215feb947c0888c0810446e3e0e9f5a8b0156e6bc6bcb20d30867"},
 ]
 
 [package.dependencies]
-image-analyst = ">=0.1.1,<0.2.0"
+image-analyst = ">=0.1.2,<0.2.0"
 numpy = ">=1.24.3,<2.0.0"
 tensorflow = ">=2.10.0,<3.0.0"
 tensorflow-io-gcs-filesystem = ">=0.29,<0.30"
@@ -1221,19 +1219,19 @@ py-cpuinfo = "*"
 py3nvml = "*"
 
 [[package]]
-name = "opencv-python"
+name = "opencv-contrib-python"
 version = "4.8.0.74"
 description = "Wrapper package for OpenCV python bindings."
 optional = true
 python-versions = ">=3.6"
 files = [
-    {file = "opencv-python-4.8.0.74.tar.gz", hash = "sha256:009e3ce356a0cd2d7423723e00a32fd3d3cc5bb5970ed27a9a1f8a8f221d1db5"},
-    {file = "opencv_python-4.8.0.74-cp37-abi3-macosx_10_16_x86_64.whl", hash = "sha256:31d0d59fc8fdf703de4cec46c79b9f8d026fdde9d23d6e2e6a66809feeebbda9"},
-    {file = "opencv_python-4.8.0.74-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:66eadb5882ee56848b67f9fb57aadcaca2f4c9d9d00a0ef11043041925b51291"},
-    {file = "opencv_python-4.8.0.74-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:038ba7075e55cb8e2846663ae970f0fb776a45b48ee69a887bf4ee15e2570083"},
-    {file = "opencv_python-4.8.0.74-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:43dd0dfe331fb95767af581bf3b2781d7a72cf6560ddf2f55949fe547f3e5c9f"},
-    {file = "opencv_python-4.8.0.74-cp37-abi3-win32.whl", hash = "sha256:458e5dc377f15fcf769d80314f3d885bd95457b1a2891bee67df2eb24a1d3a52"},
-    {file = "opencv_python-4.8.0.74-cp37-abi3-win_amd64.whl", hash = "sha256:8fe0018d0056a5187c57120b6b3f6c3e706c13b45c48e54e86d245a9a16fac84"},
+    {file = "opencv-contrib-python-4.8.0.74.tar.gz", hash = "sha256:417cb1fc63894d1ebdfc58fd8ac1a5cacc831512aa4ca064d0244ae7a2d3580f"},
+    {file = "opencv_contrib_python-4.8.0.74-cp37-abi3-macosx_10_16_x86_64.whl", hash = "sha256:c184b5295d8bf6c0e7ee0ab8dd85b43c02c53d6d5ded121adc0a42f170c8bc07"},
+    {file = "opencv_contrib_python-4.8.0.74-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:fbbccc3859b5fc0baa2c5cb7cd5381e1322f1d42b1f93e3468a72892fe5effd9"},
+    {file = "opencv_contrib_python-4.8.0.74-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c5021b46d1e3e32ab2e59f8fb33ba0f1cb09720c3b9a8db0b48be95385b894b7"},
+    {file = "opencv_contrib_python-4.8.0.74-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:24be748f935552ed22fa23f001d684fdf48035599b1ad8a225f0f3b592e63659"},
+    {file = "opencv_contrib_python-4.8.0.74-cp37-abi3-win32.whl", hash = "sha256:c5cb276b6a5ad2ff5cb812aea177c76dc30bd022cec16ace1d002bbf73518dec"},
+    {file = "opencv_contrib_python-4.8.0.74-cp37-abi3-win_amd64.whl", hash = "sha256:4fdc7568b93e8307457569eeae59e778d34a05be85a8b67782b969273ee71457"},
 ]
 
 [package.dependencies]
@@ -2670,4 +2668,4 @@ tf = ["image-analyst-tf"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "3b37db6359d5026ee2a80007c431b0aac630361955795b83e40814433adca54a"
+content-hash = "f9b08090755c5a3fcde9859fb358ea1b8f16f8aa505e41ea324953c24dc9a844"
