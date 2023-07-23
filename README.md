@@ -9,7 +9,7 @@ The application requires:
 
 - [Python](https://www.python.org/) ~= 3.9
 - [pip](https://pip.pypa.io/en/stable/)
-
+<!--
 ## Extras
 
 The application has some extras that can be installed:
@@ -18,7 +18,7 @@ The application has some extras that can be installed:
 - [hf](https://github.com/BergLucas/ImageAnalystHF)
 - [tf](https://github.com/BergLucas/ImageAnalystTF)
 - [onnx](https://github.com/BergLucas/ImageAnalystONNX)
-
+!-->
 ## Download & Installation
 
 There is two ways to download and install the application.
@@ -40,7 +40,7 @@ pip install image_analyst-X.X.X-py3-none-any.whl
 ```
 
 (Note: The X.X.X must be replaced by the version that you want to install.)
-
+<!--
 ## Example
 
 This example allows you to track objects from your webcam. It requires the `cv2` extra.
@@ -56,10 +56,10 @@ def report_callback(filename: str, current_size: float, total_size: float):
 
 model = YoloV3OpenCV.coco(report_callback=report_callback)
 
-tracker = IOUTracker()
+tracking_function = IOUTracker(model)
 
 with create_frame_generator(0) as frame_generator:
-    for tracking_function, frame in zip(tracker(model), frame_generator):
+    for frame in frame_generator:
         converted_frame = convert_image(frame, model.supported_format, model.supported_dtype)
         instances = tracking_function(converted_frame)
 
@@ -77,7 +77,7 @@ with create_frame_generator(0) as frame_generator:
 
 cv2.destroyAllWindows()
 ```
-
+!-->
 ## License
 
 All code is licensed for others under a MIT license (see [LICENSE](https://github.com/BergLucas/ImageAnalyst/blob/main/LICENSE)).
