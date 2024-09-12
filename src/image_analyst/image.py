@@ -1,12 +1,14 @@
-from image_analyst.exceptions import (
-    InvalidImageException,
-    InvalidDimensionsException,
-)
-from dataclasses import dataclass
-from typing import Protocol
-from enum import Enum, auto
-import numpy as np
 import math
+from dataclasses import dataclass
+from enum import Enum, auto
+from typing import Protocol
+
+import numpy as np
+
+from image_analyst.exceptions import (
+    InvalidDimensionsException,
+    InvalidImageException,
+)
 
 
 class ImageFormat(Enum):
@@ -77,6 +79,9 @@ class BoundingBox:
         ), "xmax must be greater than xmin and ymax must be greater than ymin."
 
 
+IMAGE_NDIM = 3
+
+
 def verify_image(image: np.ndarray) -> None:
     """Verifies that `image` is a valid numpy image.
 
@@ -86,7 +91,7 @@ def verify_image(image: np.ndarray) -> None:
     Raises:
         InvalidImageException: if `image` is not a valid numpy image.
     """
-    if image.ndim != 3:
+    if image.ndim != IMAGE_NDIM:
         raise InvalidImageException(
             "The image must be a 3D array (height, width, channels)."
         )

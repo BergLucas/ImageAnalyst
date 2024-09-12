@@ -1,10 +1,14 @@
 from __future__ import annotations
+
+import logging
+from dataclasses import dataclass
+from typing import TYPE_CHECKING, NamedTuple, Protocol
+
 from image_analyst.models import Detection, DetectionFunction
 from image_analyst.utils import iou
-from typing import Protocol, NamedTuple
-from dataclasses import dataclass
-import numpy as np
-import logging
+
+if TYPE_CHECKING:
+    import numpy as np
 
 logger = logging.getLogger(__name__)
 

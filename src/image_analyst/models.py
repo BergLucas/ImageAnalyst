@@ -1,7 +1,9 @@
-from image_analyst.image import ImageFormat, BoundingBox
 from dataclasses import dataclass
 from typing import Protocol
+
 import numpy as np
+
+from image_analyst.image import BoundingBox, ImageFormat
 
 
 @dataclass(init=True, repr=True, eq=True, frozen=True)

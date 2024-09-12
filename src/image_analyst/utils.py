@@ -1,14 +1,19 @@
 from __future__ import annotations
-from image_analyst.exceptions import DownloadFailedException
-from image_analyst.models import BoundingBox, Detection
-from typing import Optional, Protocol, Union
-from numbers import Real
-import urllib.request
-import urllib.error
-import numpy as np
+
 import logging
 import os
+import urllib.error
+import urllib.request
+from typing import TYPE_CHECKING, Optional, Protocol, Union
 
+import numpy as np
+
+from image_analyst.exceptions import DownloadFailedException
+
+if TYPE_CHECKING:
+    from numbers import Real
+
+    from image_analyst.models import BoundingBox, Detection
 
 logger = logging.getLogger(__name__)
 

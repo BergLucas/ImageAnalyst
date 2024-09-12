@@ -1,7 +1,10 @@
 from __future__ import annotations
-from image_analyst.trackers import ODInstance
-from typing import Protocol, TypeVar, Iterable
+
 from dataclasses import dataclass
+from typing import TYPE_CHECKING, Iterable, Protocol, TypeVar
+
+if TYPE_CHECKING:
+    from image_analyst.trackers import ODInstance
 
 T_co = TypeVar("T_co", covariant=True)
 
