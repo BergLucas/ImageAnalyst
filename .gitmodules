@@ -1,0 +1,15 @@
+[submodule "addons/cv2"]
+	path = addons/cv2
+	url = https://github.com/BergLucas/ImageAnalystCV2
+[submodule "addons/tf"]
+	path = addons/tf
+	url = https://github.com/BergLucas/ImageAnalystTF
+[submodule "addons/onnx"]
+	path = addons/onnx
+	url = https://github.com/BergLucas/ImageAnalystONNX
+[submodule "addons/hf"]
+	path = addons/hf
+	url = https://github.com/BergLucas/ImageAnalystHF
+[submodule "addons/rknn"]
+	path = addons/rknn
+	url = https://github.com/BergLucas/ImageAnalystRKNN
