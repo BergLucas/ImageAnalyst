@@ -72,7 +72,7 @@ class IOUTracker(TrackingFunction):
             raise ValueError("iou_threshold must be between 0 and 1.")
 
         self.__id = 0
-        self.__previous_instances = []
+        self.__previous_instances: list[Detection] = []
         self.__iou_threshold = iou_threshold
         self.__detection_function = detection_function
 
