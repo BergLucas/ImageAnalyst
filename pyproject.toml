@@ -44,7 +44,9 @@ coverage-report = ["coverage", { cmd = "coverage report" }]
 coverage-html = ["coverage", { cmd = "coverage html" }]
 mypy = "mypy src"
 black = "black src"
-ruff = "ruff check --fix src"
+ruff = "ruff check src"
+ruff-fix = "ruff check --fix src"
+ruff-ufix = "ruff check --fix --unsafe-fixes src"
 lint = ["black", "ruff", "mypy"]
 
 [tool.coverage.run]
@@ -52,8 +54,8 @@ relative_files = true
 branch = true
 source = ["src/image_analyst", "tests"]
 
-[tool.ruff]
-lint.select = [
+[tool.ruff.lint]
+select = [
     "D",   # pydocstyle
     "E",   # pycodestyle errors
     "W",   # pycodestyle warnings
@@ -67,11 +69,10 @@ lint.select = [
     "PL",  # pylint
 ]
 
-lint.ignore = ["E203", "D100", "D101", "D104", "D105", "D106", "N818"]
+ignore = ["E203", "D100", "D101", "D104", "D105", "D106", "N818"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
-
 
 [tool.mypy]
 ignore_missing_imports = true
